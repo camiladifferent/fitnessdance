@@ -9,4 +9,4 @@
 ## 📦 Instalación  
 1. Clona el repositorio:  
    ```bash
-   git clone https://github.com/camiladifferent/fitness-dance-web.git
+   git clone https://github.com/camiladifferent/fitnessdance.git

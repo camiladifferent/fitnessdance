@@ -5,8 +5,3 @@
 - HTML  
 - CSS  
 - JavaScript  
-
-## 📦 Instalación  
-1. Clona el repositorio:  
-   ```bash
-   git clone https://github.com/camiladifferent/fitnessdance.git

@@ -1,0 +1,11 @@
+/* Botones de acción */
+.acciones-contacto {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.boton.secundario {
+  background: var(--color-secundario);
+}

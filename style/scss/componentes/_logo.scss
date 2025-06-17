@@ -1,0 +1,90 @@
+/* === Efecto Combinado Subrayado + Gradiente === */
+.logo-combined {
+  padding: 5px 15px;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.logo-combined-img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+  z-index: 3;
+}
+
+.logo-combined-title {
+  position: relative;
+  transition: all 0.4s ease;
+  z-index: 3;
+}
+
+.logo-combined-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-claro);
+  transition: width 0.4s ease, background-color 0.4s ease;
+  z-index: 2;
+}
+
+.logo-combined-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,
+      var(--color-principal),
+      var(--color-secundario),
+      var(--color-principal));
+  background-size: 200% 200%;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.6s ease;
+}
+
+/* Efectos al hacer hover */
+.logo-combined:hover {
+  transform: translateY(-2px);
+}
+
+.logo-combined:hover .logo-combined-img {
+  transform: rotate(10deg) scale(1.1);
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
+}
+
+.logo-combined:hover .logo-combined-title {
+  color: var(--color-claro);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.logo-combined:hover .logo-combined-underline {
+  width: 100%;
+  background-color: var(--color-principal);
+}
+
+.logo-combined:hover .logo-combined-gradient {
+  opacity: 0.6;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* Animación del gradiente */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Versión móvil más simple */
+@media (max-width: 768px) {
+  .logo-combined:hover .logo-combined-gradient {
+    animation: none;
+    opacity: 0.4;
+  }
+
+  .logo-combined:hover .logo-combined-img {
+    transform: scale(1.05);
+  }
+}

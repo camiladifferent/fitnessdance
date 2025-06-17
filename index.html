@@ -5,24 +5,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fitness Dance - Inicio</title>
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/css/style.css" />
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-
     <header>
         <nav class="navbar navbar-expand-lg sticky-top"
             style="background-color: var(--color-secundario); padding: 10px;">
             <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
                 <!-- Logo + Título -->
-                <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
-                    <img src="img/logo.png" alt="Logo Fitness Dance" width="40" height="40" class="me-2" />
-                    <h1 class="h5 mb-0" style="color: var(--color-claro);">Fitness Dance</h1>
+                <a class="navbar-brand logo-combined d-flex align-items-center text-white position-relative"
+                    href="index.html">
+                    <img src="img/logo.png" alt="Logo Fitness Dance" width="40" height="40"
+                        class="me-2 logo-combined-img" />
+                    <h1 class="h5 mb-0 logo-combined-title">Fitness Dance</h1>
+                    <span class="logo-combined-underline"></span>
+                    <span class="logo-combined-gradient"></span>
                 </a>
+
 
                 <!-- Botón hamburguesa -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
@@ -35,6 +39,9 @@
                     <ul class="navbar-nav ms-auto d-flex align-items-center gap-3">
                         <li class="nav-item">
                             <a class="nav-link text-white" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="pages/beneficios.html">Beneficios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="pages/sobrenosotros.html">Sobre Nosotros</a>
@@ -56,10 +63,70 @@
     </header>
 
     <main class="contenido">
+        <!-- Banner animado con carrusel y logo -->
+        <section class="banner-animado">
+            <div class="banner-carrusel">
+                <!-- Imágenes del carrusel -->
+                <div class="carrusel-inner">
+                    <div class="carrusel-item active">
+                        <img src="img/banner/banner1.jpg" alt="Clase de Fitness Dance">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="img/banner/banner2.jpg" alt="Grupo bailando">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="img/banner/banner3.jpg" alt="Entrenamiento en equipo">
+                    </div>
+                </div>
 
+                <!-- Controles del carrusel -->
+                <button class="carrusel-control prev" aria-label="Anterior imagen">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carrusel-control next" aria-label="Siguiente imagen">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
 
+                <!-- Indicadores -->
+                <div class="carrusel-indicadores">
+                    <span class="indicador active" data-index="0"></span>
+                    <span class="indicador" data-index="1"></span>
+                    <span class="indicador" data-index="2"></span>
+                </div>
+            </div>
+
+            <!-- Logo animado en el costado -->
+            <div class="banner-logo-animado">
+                <div class="logo-container">
+                    <img src="img/logo.png" alt="Logo Fitness Dance" class="logo-spin">
+                    <div class="logo-rays"></div>
+                </div>
+                <h2>Fitness Dance</h2>
+                <p>Transforma tu cuerpo bailando</p>
+            </div>
+        </section>
+
+        <!-- Banner con título animado -->
         <section class="banner">
-            <img src="img/banner.png" alt="Banner Fitness Dance">
+            <div class="texto-animado">
+                <h1 class="titulo-destacado text-center">Transforma tu cuerpo y mente</h1>
+            </div>
+            <div class="texto-animado delay-1">
+                <p class="text-center lead" style="font-size: 1.3rem;">Descubre el poder del baile combinado con el
+                    fitness</p>
+            </div>
+        </section>
+
+
+        <!-- Video destacado de YouTube -->
+        <section class="texto-animado delay-2">
+            <h2 class="text-center" style="margin-bottom: 20px;">Conocé nuestros horarios y lugar</h2>
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/ydO9SiB-e1E?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0"
+                    frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
         </section>
 
         <section class="resumen-actividades">
@@ -97,61 +164,70 @@
                 <p>Prof. Camila Barrionuevo</p>
             </div>
         </section>
+    </main>
+    <div class="banner-container">
+        <!-- Elementos decorativos -->
+        <div class="banner-circle circle-1"></div>
+        <div class="banner-circle circle-2"></div>
+        <div class="banner-circle circle-3"></div>
 
-
-
+        <!-- Contenido principal -->
+        <div class="banner-content">
+            <h1 class="banner-title">Transforma tu cuerpo</h1>
+            <p class="banner-subtitle">Descubre la combinación perfecta entre baile y fitness para lograr tus
+                objetivos de una manera divertida y efectiva</p>
+            <a href="pages/inscripcion.html" class="banner-btn">¡Empieza ahora!</a>
+        </div>
+    </div>
+    <main class="contenido">
         <section class="galeria">
-            <h2>Galería</h2>
-            <div class="contenedor-galeria deslizable">
-
-                <!-- Miniaturas -->
-                <a href="#modal1" class="miniatura"><img src="img/galeria1.jpg" alt="Imagen 1"></a>
-                <a href="#modal2" class="miniatura"><img src="img/galeria2.jpg" alt="Imagen 2"></a>
-                <a href="#modal3" class="miniatura"><img src="img/galeria3.jpg" alt="Imagen 3"></a>
-                <a href="#modal4" class="miniatura"><img src="img/galeria4.jpg" alt="Imagen 4"></a>
-                <a href="#modal5" class="miniatura"><img src="img/galeria5.jpg" alt="Imagen 5"></a>
-
-                <!-- Modales con navegación -->
-                <div id="modal1" class="modal">
-                    <a href="#modal5" class="navegar anterior">←</a>
-                    <a href="#modal2" class="navegar siguiente">→</a>
-                    <a href="#" class="cerrar">×</a>
-                    <img src="img/galeria1.jpg" alt="Imagen 1">
+            <h2 class="titulo-destacado text-center">Galería</h2>
+            <div class="contenedor-galeria">
+                <!-- Fila 1 -->
+                <div class="miniatura" data-fullsize="img/galeria1.jpg">
+                    <img src="img/galeria1.jpg" alt="Imagen de galeria 1">
+                </div>
+                <div class="miniatura" data-fullsize="img/galeria2.jpg">
+                    <img src="img/galeria2.jpg" alt="Imagen de galeria 2">
+                </div>
+                <div class="miniatura" data-fullsize="img/galeria3.jpg">
+                    <img src="img/galeria3.jpg" alt="Imagen de galeria 3">
+                </div>
+                <div class="miniatura" data-fullsize="img/galeria4.jpg">
+                    <img src="img/galeria4.jpg" alt="Imagen de galeria 4">
                 </div>
 
-                <div id="modal2" class="modal">
-                    <a href="#modal1" class="navegar anterior">←</a>
-                    <a href="#modal3" class="navegar siguiente">→</a>
-                    <a href="#" class="cerrar">×</a>
-                    <img src="img/galeria2.jpg" alt="Imagen 2">
+                <!-- Fila 2 -->
+                <div class="miniatura" data-fullsize="img/galeria5.jpg">
+                    <img src="img/galeria5.jpg" alt="Imagen de galeria 5">
                 </div>
-
-                <div id="modal3" class="modal">
-                    <a href="#modal2" class="navegar anterior">←</a>
-                    <a href="#modal4" class="navegar siguiente">→</a>
-                    <a href="#" class="cerrar">×</a>
-                    <img src="img/galeria3.jpg" alt="Imagen 3">
+                <div class="miniatura" data-fullsize="img/galeria6.jpg">
+                    <img src="img/galeria6.jpg" alt="Imagen de galeria 6">
                 </div>
-
-                <div id="modal4" class="modal">
-                    <a href="#modal3" class="navegar anterior">←</a>
-                    <a href="#modal5" class="navegar siguiente">→</a>
-                    <a href="#" class="cerrar">×</a>
-                    <img src="img/galeria4.jpg" alt="Imagen 4">
+                <div class="miniatura" data-fullsize="img/galeria7.jpg">
+                    <img src="img/galeria7.jpg" alt="Imagen de galeria 7">
                 </div>
-
-                <div id="modal5" class="modal">
-                    <a href="#modal4" class="navegar anterior">←</a>
-                    <a href="#modal1" class="navegar siguiente">→</a>
-                    <a href="#" class="cerrar">×</a>
-                    <img src="img/galeria5.jpg" alt="Imagen 5">
+                <div class="miniatura" data-fullsize="img/galeria8.jpg">
+                    <img src="img/galeria8.jpg" alt="Imagen de galeria 8">
                 </div>
+            </div>
 
+            <!-- Modal -->
+            <div class="modal-galeria" id="modalGaleria">
+                <span class="cerrar-modal">&times;</span>
+                <img class="imagen-modal" id="imagenModal">
+                <div class="controles-galeria">
+                    <button class="anterior">&#10094;</button>
+                    <button class="siguiente">&#10095;</button>
+                </div>
             </div>
         </section>
         </br>
         <section class="acciones">
-            <a href="pages/inscripcion.html" class="boton">Inscribirse</a>
+            <div class="contenedor-botones">
+                <a href="pages/inscripcion.html" class="boton">Inscribirse</a>
+                <a href="pages/contacto.html" class="boton secundario">Contacto</a>
+            </div>
         </section>
 
         <section class="seccion-promociones">
@@ -184,21 +260,180 @@
             <!-- Bloque 2: Redes sociales -->
             <div class="footer-bloque footer-medio">
                 <div class="footer-iconos">
-                    <img src="img/iconos/facebook.png" alt="Facebook">
-                    <img src="img/iconos/instagram.png" alt="Instagram">
-                    <img src="img/iconos/tiktok.png" alt="TikTok">
+                    <!-- Facebook -->
+                    <a href="http://facebook.com/fitnessdancetinogasta" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/fitnessdancetinogasta?igsh=bmVtanEyNDcxaTc3" target="_blank"
+                        class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@FitnessDanceTinogasta" target="_blank" class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
                 </div>
             </div>
 
             <!-- Bloque 3: Teléfono y botón -->
             <div class="footer-bloque">
-                <p>Teléfonos:<br>3837-488054 / 3837-692695</p>
+                <p>Teléfonos:<br>3837-488054</p>
                 <a href="pages/contacto.html" class="boton">Contacto</a>
             </div>
 
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Pequeño script para asegurar que las animaciones funcionen al recargar
+        document.addEventListener('DOMContentLoaded', function () {
+            // Forzar repintado para activar animaciones
+            setTimeout(function () {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+    <script>
+        // Carrusel automático
+        document.addEventListener('DOMContentLoaded', function () {
+            const carrusel = document.querySelector('.carrusel-inner');
+            const items = document.querySelectorAll('.carrusel-item');
+            const indicadores = document.querySelectorAll('.indicador');
+            let currentIndex = 0;
+            const totalItems = items.length;
+            let intervalId;
 
+            // Función para mover el carrusel
+            function moveToIndex(index) {
+                if (index < 0) index = totalItems - 1;
+                if (index >= totalItems) index = 0;
+
+                currentIndex = index;
+                carrusel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                // Actualizar indicadores
+                indicadores.forEach((ind, i) => {
+                    ind.classList.toggle('active', i === currentIndex);
+                });
+            }
+
+            // Función para avanzar automáticamente
+            function startAutoSlide() {
+                intervalId = setInterval(() => {
+                    moveToIndex(currentIndex + 1);
+                }, 5000);
+            }
+
+            // Iniciar el auto slide
+            startAutoSlide();
+
+            // Controles manuales
+            document.querySelector('.prev').addEventListener('click', () => {
+                clearInterval(intervalId);
+                moveToIndex(currentIndex - 1);
+                startAutoSlide();
+            });
+
+            document.querySelector('.next').addEventListener('click', () => {
+                clearInterval(intervalId);
+                moveToIndex(currentIndex + 1);
+                startAutoSlide();
+            });
+
+            // Indicadores clickeables
+            indicadores.forEach(ind => {
+                ind.addEventListener('click', () => {
+                    clearInterval(intervalId);
+                    moveToIndex(parseInt(ind.dataset.index));
+                    startAutoSlide();
+                });
+            });
+
+            // Pausar al hacer hover
+            carrusel.addEventListener('mouseenter', () => {
+                clearInterval(intervalId);
+            });
+
+            carrusel.addEventListener('mouseleave', () => {
+                startAutoSlide();
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const miniaturas = document.querySelectorAll('.miniatura');
+            const modal = document.getElementById('modalGaleria');
+            const imagenModal = document.getElementById('imagenModal');
+            const cerrarModal = document.querySelector('.cerrar-modal');
+            const anteriorBtn = document.querySelector('.anterior');
+            const siguienteBtn = document.querySelector('.siguiente');
+            let currentIndex = 0;
+
+            // Abrir modal al hacer clic en miniatura
+            miniaturas.forEach((miniatura, index) => {
+                miniatura.addEventListener('click', () => {
+                    currentIndex = index;
+                    imagenModal.src = miniatura.dataset.fullsize;
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            // Cerrar modal
+            cerrarModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+
+            // Cerrar al hacer clic fuera de la imagen
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Navegación
+            function mostrarImagen(index) {
+                if (index >= miniaturas.length) {
+                    currentIndex = 0;
+                } else if (index < 0) {
+                    currentIndex = miniaturas.length - 1;
+                } else {
+                    currentIndex = index;
+                }
+                imagenModal.src = miniaturas[currentIndex].dataset.fullsize;
+            }
+
+            anteriorBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                mostrarImagen(currentIndex - 1);
+            });
+
+            siguienteBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                mostrarImagen(currentIndex + 1);
+            });
+
+            // Navegación con teclado
+            document.addEventListener('keydown', (e) => {
+                if (modal.style.display === 'block') {
+                    if (e.key === 'ArrowLeft') {
+                        mostrarImagen(currentIndex - 1);
+                    } else if (e.key === 'ArrowRight') {
+                        mostrarImagen(currentIndex + 1);
+                    } else if (e.key === 'Escape') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

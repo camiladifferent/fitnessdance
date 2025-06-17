@@ -1,0 +1,118 @@
+/* Contenedor principal */
+.seccion-contacto {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.contenedor-contacto {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Grid de tarjetas con igual altura */
+.info-contacto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+  align-items: stretch;
+}
+
+.tarjeta-contacto {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto bounce al hacer hover */
+.tarjeta-contacto:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenido de la tarjeta */
+.tarjeta-contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+/* Elementos decorativos para el hover */
+.tarjeta-contacto::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-principal), var(--color-secundario));
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.tarjeta-contacto:hover::after {
+  opacity: 0.05;
+}
+
+.tarjeta-contacto i {
+  font-size: 2rem;
+  color: var(--color-principal);
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.tarjeta-contacto:hover i {
+  transform: scale(1.2);
+  color: var(--color-principal);
+}
+
+.tarjeta-contacto h3 {
+  color: var(--color-secundario);
+  margin-bottom: 15px;
+  transition: color 0.3s;
+}
+
+.tarjeta-contacto:hover h3 {
+  color: var(--color-principal);
+}
+
+.tarjeta-contacto p {
+  margin: 8px 0;
+  color: #555;
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .info-contacto {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-contacto {
+    padding: 20px;
+  }
+
+  .tarjeta-contacto:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+/* === Mostrar 3 actividades por fila === */
+@media (min-width: 769px) {
+  .resumen-actividades .actividad {
+    flex: 0 0 calc(31.33% - 15px);
+  }
+}

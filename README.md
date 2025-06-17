@@ -23,7 +23,7 @@
 
 <div align="center">
   <img src="screenshot/captura.png" width="45%" alt="Página principal">
-  <em>Vistas del sitio FitnessDance - Diseño responsivo</em>
+  <br>Vistas del sitio FitnessDance - Diseño responsivo
 </div>
 
 

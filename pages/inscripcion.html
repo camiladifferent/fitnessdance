@@ -1,0 +1,446 @@
+<!-- inscripcion.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta SEO -->
+    <meta name="description"
+        content="Inscribite en nuestras clases de Fitness Dance en Tinogasta. Elige turno, sede y comenzá a entrenar bailando.">
+    <meta name="keywords"
+        content="inscripción fitness, danza, entrenamiento, clases de baile, fitness dance, turnos, tinogasta">
+    <meta name="author" content="Camila Barrionuevo">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Inscripción | Fitness Dance Tinogasta">
+    <meta property="og:description"
+        content="Completá el formulario para sumarte a nuestras clases. Elegí tu sede y comenzá a moverte.">
+    <meta property="og:image" content="https://fitnessdance.netlify.app/img/logo.png">
+    <meta property="og:url" content="https://fitnessdance.netlify.app/pages/inscripcion.html">
+    <meta property="og:type" content="website">
+
+    <title>Inscripción - Fitness Dance</title>
+    <link rel="stylesheet" href="../style/css/style.css" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top"
+            style="background-color: var(--color-secundario); padding: 10px;">
+            <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
+                <!-- Logo + Título -->
+                <a class="navbar-brand logo-combined d-flex align-items-center text-white position-relative"
+                    href="../index.html">
+                    <img src="../img/logo.png" alt="Logo Fitness Dance" width="40" height="40"
+                        class="me-2 logo-combined-img">
+                    <h1 class="h5 mb-0 logo-combined-title">Fitness Dance</h1>
+                    <span class="logo-combined-underline"></span>
+                    <span class="logo-combined-gradient"></span>
+                </a>
+
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+                    aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú colapsable -->
+                <div class="collapse navbar-collapse" id="menuNav">
+                    <ul class="navbar-nav ms-auto d-flex align-items-center gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../pages/beneficios.html">Beneficios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../pages/sobrenosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white active" href="../pages/inscripcion.html">Inscripción</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../pages/galeria.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../pages/capacitaciones.html">Capacitaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../pages/contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-sm" style="background-color: var(--color-principal); color: white;"
+                                data-bs-toggle="modal" data-bs-target="#loginModal">
+                                Iniciar Sesión
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Banner con efecto parallax -->
+    <div class="banner-container">
+        <div class="banner-content">
+            <h1 class="banner-title">Inscripción</h1>
+            <p class="banner-subtitle">Inscribete en Danza Fitness</p>
+        </div>
+        <div class="banner-circle circle-1"></div>
+        <div class="banner-circle circle-2"></div>
+        <div class="banner-circle circle-3"></div>
+    </div>
+    <main class="contenido">
+        <h1>Formulario de Inscripción</h1>
+        <!-- Formulario de Inscripción -->
+        <section class="formulario-interes">
+            <div class="container">
+                <h2 class="section-title">Inscríbete a nuestras clases</h2>
+                <div class="form-container">
+                    <form id="formInscripcion" class="formulario" action="#" method="post">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}"
+                                placeholder="Ej: 3837488054" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clase">Clase a inscribirse</label>
+                            <select id="clase" name="clase" required>
+                                <option value="">--Selecciona una opción--</option>
+                                <option value="danza">Turno 17 horas | Studio Dance</option>
+                                <option value="fitness">Turno 18:30 horas | Sagittarius</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comentarios">Comentarios adicionales</label>
+                            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">Enviar Inscripción</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de información adicional -->
+        <section class="info-inscripcion">
+            <div class="contenedor-info">
+                <!-- Beneficios de inscribirse -->
+                <div class="card-info animado">
+                    <div class="icono-info">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Beneficios al inscribirte</h3>
+                    <ul>
+                        <li>Acceso ilimitado a todas las clases del turno seleccionado</li>
+                        <li>Descuentos en eventos especiales</li>
+                        <li>Asesoramiento personalizado de nuestros instructores</li>
+                        <li>Kit de bienvenida (incluye botella y toalla)</li>
+                    </ul>
+                </div>
+
+                <!-- Métodos de pago -->
+                <div class="card-info animado" style="animation-delay: 0.2s;">
+                    <div class="icono-info">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Métodos de pago</h3>
+                    <ul>
+                        <li>Efectivo (en nuestras instalaciones)</li>
+                        <li>Transferencia bancaria</li>
+                        <li>Mercado Pago</li>
+                        <li>Tarjetas de crédito</li>
+                    </ul>
+                    <div class="medios-pago">
+                        <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.19.1/mercadopago/logo__small@2x.png"
+                            alt="Mercado Pago">
+                        <img src="https://www.visa.com.uy/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg"
+                            alt="Visa">
+                        <img src="https://www.mastercard.us/content/dam/mccom/global/logos/logo-mastercard-mobile.svg"
+                            alt="Mastercard">
+                    </div>
+                </div>
+
+                <!-- Preguntas frecuentes -->
+                <div class="card-info animado" style="animation-delay: 0.4s;">
+                    <div class="icono-info">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Preguntas frecuentes</h3>
+                    <div class="acordeon-faq">
+                        <div class="acordeon-item">
+                            <button class="acordeon-titulo">
+                                ¿Puedo cambiar de turno después de inscribirme?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="acordeon-contenido">
+                                <p>Sí, puedes cambiar de turno sujeto a disponibilidad. Comunícate con nosotros para
+                                    coordinar el cambio.</p>
+                            </div>
+                        </div>
+
+                        <div class="acordeon-item">
+                            <button class="acordeon-titulo">
+                                ¿Hay requisitos de edad?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="acordeon-contenido">
+                                <p>Nuestras clases están abiertas a personas desde los 15 años en adelante. No hay
+                                    límite de edad máxima.</p>
+                            </div>
+                        </div>
+
+                        <div class="acordeon-item">
+                            <button class="acordeon-titulo">
+                                ¿Qué debo llevar a mi primera clase?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="acordeon-contenido">
+                                <p>Ropa cómoda, zapatillas deportivas, una botella de agua y muchas ganas de bailar y
+                                    divertirte.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contenido">
+            <!-- Bloque 1: Logo y texto -->
+            <div class="footer-bloque">
+                <div class="footer-logo">
+                    <img src="../img/logo.png" alt="Logo" />
+                    <span>Fitness Dance</span>
+                </div>
+            </div>
+
+            <!-- Bloque 2: Redes sociales -->
+            <div class="footer-bloque footer-medio">
+                <div class="footer-iconos">
+                    <!-- Facebook -->
+                    <a href="http://facebook.com/fitnessdancetinogasta" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/fitnessdancetinogasta?igsh=bmVtanEyNDcxaTc3" target="_blank"
+                        class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@FitnessDanceTinogasta" target="_blank" class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Bloque 3: Teléfono y botón -->
+            <div class="footer-bloque">
+                <p>Teléfonos:<br />3837-488054</p>
+                <a href="contacto.html" class="boton">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Funcionalidad del acordeón FAQ
+        document.querySelectorAll('.acordeon-titulo').forEach(button => {
+            button.addEventListener('click', () => {
+                const acordeonItem = button.parentElement;
+                const contenido = button.nextElementSibling;
+
+                button.classList.toggle('active');
+
+                if (button.classList.contains('active')) {
+                    contenido.style.maxHeight = contenido.scrollHeight + 'px';
+                } else {
+                    contenido.style.maxHeight = 0;
+                }
+
+                // Cerrar otros items
+                document.querySelectorAll('.acordeon-item').forEach(item => {
+                    if (item !== acordeonItem) {
+                        item.querySelector('.acordeon-titulo').classList.remove('active');
+                        item.querySelector('.acordeon-contenido').style.maxHeight = 0;
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Modal de confirmación de Solicitud - Versión actualizada -->
+    <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-5">
+                    <div class="mb-4">
+                        <i class="fas fa-check-circle" style="font-size: 5rem; color: #ec008c;"></i>
+                    </div>
+                    <h3 class="mb-3">¡Inscripción exitosa!</h3>
+                    <p class="mb-4">Hemos recibido tu solicitud y nos pondremos en contacto contigo a la brevedad.</p>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/543837488054" target="_blank" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <!-- Modal de Inicio de Sesión -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="formulario" action="#" method="post">
+                        <div class="mb-3">
+                            <label for="modalEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="modalEmail" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="modalPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="modalPassword" name="contrasena" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-medium">Selecciona tu rol</label>
+                            <div class="role-selector">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="role-option" data-role="alumno">
+                                            <i class="fas fa-user-graduate"></i>
+                                            <h5>Alumno</h5>
+                                            <p>Accede a tus cursos y materiales</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="role-option" data-role="docente">
+                                            <i class="fas fa-chalkboard-teacher"></i>
+                                            <h5>Docente</h5>
+                                            <p>Gestiona tus clases y estudiantes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="role" name="role" value="">
+                        </div>
+
+                        <button class="btn btn-sm" style="background-color: var(--color-principal); color: white;"
+                            type="submit">
+                            Iniciar Sesión
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="small mb-0">¿No tienes cuenta? <a href="../pages/iniciosesion.html">Regístrate aquí</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de confirmación de Login -->
+    <div class="modal fade" id="loginConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-5">
+                    <div class="mb-4">
+                        <i class="fas fa-check-circle" style="font-size: 5rem; color: #ec008c;"></i>
+                    </div>
+                    <h3 class="mb-3">¡Inicio de sesión exitoso!</h3>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Esperar a que el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function () {
+            // Funcionalidad para el formulario de inscripción
+            const formInscripcion = document.getElementById('formInscripcion');
+            if (formInscripcion) {
+                formInscripcion.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    showModalAndResetForm('confirmacionModal', this);
+                });
+            }
+
+            // Funcionalidad del formulario de login
+            const loginForm = document.querySelector('#loginModal form');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Oculta el modal de login
+                    const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+                    if (loginModal) loginModal.hide();
+
+                    showModalAndResetForm('loginConfirmModal', this);
+                });
+
+                // Funcionalidad para seleccionar rol
+                document.querySelectorAll('.role-option').forEach(option => {
+                    option.addEventListener('click', function () {
+                        // Remover selección previa
+                        document.querySelectorAll('.role-option').forEach(opt => {
+                            opt.classList.remove('selected');
+                        });
+
+                        // Marcar como seleccionado
+                        this.classList.add('selected');
+                        document.getElementById('role').value = this.dataset.role;
+
+                        // Habilitar el botón de login
+                        const submitBtn = document.querySelector('#loginModal form button[type="submit"]');
+                        if (submitBtn) submitBtn.disabled = false;
+                    });
+                });
+            }
+
+            // Función reutilizable para mostrar modal y resetear formulario
+            function showModalAndResetForm(modalId, formElement) {
+                const modal = new bootstrap.Modal(document.getElementById(modalId));
+                if (modal) modal.show();
+
+                // Opcional: Limpiar el formulario después de 3 segundos
+                if (formElement) {
+                    setTimeout(() => {
+                        formElement.reset();
+                    }, 3000);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

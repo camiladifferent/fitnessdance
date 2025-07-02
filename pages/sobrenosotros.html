@@ -4,8 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Meta SEO -->
   <meta name="description"
-    content="Conoce a nuestro equipo de profesionales en Fitness Dance. Instructores certificados con años de experiencia en danza y fitness.">
+    content="Conocé al equipo de Fitness Dance y nuestra historia. Unimos baile, entrenamiento y comunidad en cada clase.">
+  <meta name="keywords"
+    content="sobre nosotros, equipo fitness dance, instructores, historia, misión, valores, tinogasta">
+  <meta name="author" content="Camila Barrionuevo">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sobre Nosotros | Fitness Dance Tinogasta">
+  <meta property="og:description"
+    content="Descubrí quiénes somos y cómo nació Fitness Dance. Nuestra misión es transformar vidas a través del movimiento.">
+  <meta property="og:image" content="https://fitnessdance.netlify.app/img/logo.png">
+  <meta property="og:url" content="https://fitnessdance.netlify.app/pages/sobrenosotros.html">
+  <meta property="og:type" content="website">
   <title>Sobre Nosotros - Fitness Dance</title>
   <link rel="stylesheet" href="../style/css/style.css" />
   <!-- Bootstrap -->
@@ -23,7 +36,7 @@
         <!-- Logo + Título -->
         <a class="navbar-brand logo-combined d-flex align-items-center text-white position-relative"
           href="../index.html">
-          <img src="../img/logo.png" alt="Logo Fitness Dance" width="40" height="40" class="me-2 logo-combined-img" />
+          <img src="../img/logo.png" alt="Logo Fitness Dance" width="40" height="40" class="me-2 logo-combined-img">
           <h1 class="h5 mb-0 logo-combined-title">Fitness Dance</h1>
           <span class="logo-combined-underline"></span>
           <span class="logo-combined-gradient"></span>
@@ -51,11 +64,19 @@
               <a class="nav-link text-white" href="../pages/inscripcion.html">Inscripción</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link text-white" href="../pages/galeria.html">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="../pages/capacitaciones.html">Capacitaciones</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link text-white" href="../pages/contacto.html">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-sm" style="background-color: var(--color-principal); color: white;"
-                href="../pages/iniciosesion.html">Iniciar Sesión</a>
+              <button class="btn btn-sm" style="background-color: var(--color-principal); color: white;"
+                data-bs-toggle="modal" data-bs-target="#loginModal">
+                Iniciar Sesión
+              </button>
             </li>
           </ul>
         </div>
@@ -75,27 +96,55 @@
   </div>
 
   <main class="contenido">
-    <!-- Sección de historia -->
-    <section class="seccion-doble animado">
-      <div class="bloque">
-        <h2 class="titulo-destacado">Nuestra Historia</h2>
-        <p>Fitness Dance nació en 2024 con la visión de combinar el ejercicio físico con la alegría del baile. Desde
-          nuestros humildes comienzos en un pequeño estudio, hemos estado creciendo y esperamos convertirnos en un
-          referente del fitness en Tinogasta.</p>
-        <p>Nuestra filosofía se basa en tres pilares: diversión, salud y comunidad. Creemos que el ejercicio debe ser
-          disfrutable para ser sostenible en el tiempo.</p>
+    <!-- Sección de historia con iconos -->
+    <!-- Sección de historia con diseño de iconos anterior -->
+    <section class="importancia-ejercicio">
+      <div class="titulo-destacado texto-animado">
+        <h2>Nuestra Esencia</h2>
       </div>
-      <div class="bloque">
-        <h2 class="titulo-destacado">Misión</h2>
-        <p>Transformar vidas a través del fitness dance, ofreciendo un espacio inclusivo que combina ejercicio,
-          diversión y desarrollo personal para todas las edades.</p>
 
-        <h2 class="titulo-destacado">Visión</h2>
-        <p>Consolidarnos como el estudio líder en Tinogasta, innovando con programas que integran danza y bienestar para
-          construir una comunidad saludable y conectada.</p>
+      <div class="contenedor-importancia">
+        <!-- Historia -->
+        <div class="card-importancia animado" style="animation-delay: 0.2s;">
+          <div class="icono-importancia">
+            <i class="fas fa-history"></i>
+          </div>
+          <h3>Nuestra Historia</h3>
+          <p>Fitness Dance nació en 2024 con la visión de combinar ejercicio físico con la alegría del baile. Desde un
+            pequeño estudio en Tinogasta, crecemos para ser referentes del fitness.</p>
+        </div>
+
+        <!-- Filosofía -->
+        <div class="card-importancia animado" style="animation-delay: 0.4s;">
+          <div class="icono-importancia">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3>Filosofía</h3>
+          <p>Basada en tres pilares: <strong>diversión, salud y comunidad</strong>. Creemos que el ejercicio debe ser
+            disfrutable para ser sostenible.</p>
+        </div>
+
+        <!-- Misión -->
+        <div class="card-importancia animado" style="animation-delay: 0.6s;">
+          <div class="icono-importancia">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Misión</h3>
+          <p>Transformar vidas a través del fitness dance, con un espacio inclusivo que combina ejercicio, diversión y
+            desarrollo personal.</p>
+        </div>
+
+        <!-- Visión -->
+        <div class="card-importancia animado" style="animation-delay: 0.8s;">
+          <div class="icono-importancia">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3>Visión</h3>
+          <p>Ser el estudio líder en Tinogasta, innovando con programas que integran danza y bienestar para construir
+            comunidad.</p>
+        </div>
       </div>
     </section>
-
     <!-- Sección de profesores -->
     <section class="animado delay-1">
       <h1 class="titulo-destacado">Nuestros Profesores</h1>
@@ -103,38 +152,91 @@
         mundo del fitness y la danza.</p>
 
       <div class="fichas-profesores">
-        <div class="ficha actividad-especial">
-          <img src="../img/profes/profe1.jpg" alt="Prof. Camila" />
-          <h2>Camila Barrionuevo</h2>
-          <p class="text-muted">Especialista en Aerodance y Strong Fit</p>
-
-          <p>
-            Profesora e Instructora de Danza y Fitness. Con más de 8 años de
-            experiencia, especializada en Aerodance y Strong Fit. Certificada por la Federación Internacional de
-            Fitness.
-          </p>
+        <!-- Profesor 1 -->
+        <div class="ficha actividad animado" style="max-width: 420px;">
+          <img src="../img/profes/profe1.jpg" alt="Prof. Camila" class="img-fluid">
+          <div class="p-3">
+            <h3>Camila Barrionuevo</h3>
+            <p class="text-muted mb-2">Especialista en Aerodance y Strong Fit</p>
+            <p class="mb-3">Profesora e Instructora de Danza y Fitness. Con más de 8 años de experiencia, especializada
+              en Aerodance y Strong Fit. Certificada por la Federación Internacional de Fitness.</p>
+            <div class="mt-3 text-start">
+              <h4 class="h6 fw-bold">Certificaciones:</h4>
+              <ul class="ps-0 list-unstyled">
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fas fa-check text-primary me-2 mt-1"></i>
+                  <span>Federación Internacional de Fitness</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fas fa-check text-primary me-2 mt-1"></i>
+                  <span>Instructora de Aerodance Nivel Avanzado</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fas fa-check text-primary me-2 mt-1"></i>
+                  <span>Strong Fit Master Trainer</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="btn btn-primary w-100 mt-3">Contactar</a>
+          </div>
         </div>
 
-        <div class="ficha actividad-especial">
-          <img src="../img/profes/profe2.jpg" alt="Prof. Juan" />
-          <h2>Juan Pérez</h2>
-          <p class="text-muted">Entrenador Funcional</p>
-
-          <p>
-            Entrenador certificado en aeróbicos y musculación. Trabaja con
-            adolescentes y adultos mayores en programas de fuerza. Especializado en adaptación de ejercicios.
-          </p>
+        <!-- Profesor 2 -->
+        <div class="ficha actividad animado" style="max-width: 420px;">
+          <img src="../img/profes/profe2.jpg" alt="Prof. Juan" class="img-fluid">
+          <div class="p-3">
+            <h3>Juan Pérez</h3>
+            <p class="text-muted mb-2">Entrenador Funcional</p>
+            <p class="mb-3">Entrenador certificado en aeróbicos y musculación. Trabaja con adolescentes y adultos
+              mayores en programas de fuerza. Especializado en adaptación de ejercicios.</p>
+            <div class="mt-3 text-start">
+              <h4 class="h6 fw-bold">Certificaciones:</h4>
+              <ul class="ps-0 list-unstyled">
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fas fa-check text-primary me-2 mt-1"></i>
+                  <span>Entrenador Funcional Certificado</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fas fa-check text-primary me-2 mt-1"></i>
+                  <span>Especialista en Tercera Edad</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fas fa-check text-primary me-2 mt-1"></i>
+                  <span>Entrenamiento Adaptado</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="btn btn-primary w-100 mt-3">Contactar</a>
+          </div>
         </div>
 
-        <div class="ficha actividad-especial">
-          <img src="../img/profes/profe3.jpg" alt="Prof. Lucía" />
-          <h2>Lucía Gómez</h2>
-          <p class="text-muted">Bailarina Profesional</p>
-
-          <p>
-            Bailarina profesional con enfoque en ritmos latinos. Promueve la
-            salud física a través del baile y el bienestar emocional. Coreógrafa de varios espectáculos regionales.
-          </p>
+        <!-- Profesor 3 -->
+        <div class="ficha actividad animado" style="max-width: 420px;">
+          <img src="../img/profes/profe3.jpg" alt="Prof. Lucía" class="img-fluid">
+          <div class="p-3">
+            <h3>Lucía Gómez</h3>
+            <p class="text-muted mb-2">Bailarina Profesional</p>
+            <p class="mb-3">Bailarina profesional con enfoque en ritmos latinos. Promueve la salud física a través del
+              baile y el bienestar emocional. Coreógrafa de varios espectáculos regionales.</p>
+            <div class="mt-3 text-start">
+              <h4 class="h6 fw-bold">Certificaciones:</h4>
+              <ul class="ps-0 list-unstyled">
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fas fa-check text-primary me-2 mt-1"></i>
+                  <span>Bailarina Profesional de Ritmos Latinos</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fas fa-check text-primary me-2 mt-1"></i>
+                  <span>Coreógrafa Certificada</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fas fa-check text-primary me-2 mt-1"></i>
+                  <span>Terapia a través del Movimiento</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="btn btn-primary w-100 mt-3">Contactar</a>
+          </div>
         </div>
       </div>
     </section>
@@ -204,9 +306,129 @@
     </div>
   </footer>
   <!-- Script para funcionalidades -->
+  </script>
+  <!-- Botón flotante de WhatsApp -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/543837488054" target="_blank" aria-label="Contactar por WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+  <!-- Modal de Inicio de Sesión -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="formulario" action="#" method="post">
+            <div class="mb-3">
+              <label for="modalEmail" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="modalEmail" name="email" required>
+            </div>
 
+            <div class="mb-3">
+              <label for="modalPassword" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="modalPassword" name="contrasena" required>
+            </div>
 
+            <div class="mb-4">
+              <label class="form-label fw-medium">Selecciona tu rol</label>
+              <div class="role-selector">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="role-option" data-role="alumno">
+                      <i class="fas fa-user-graduate"></i>
+                      <h5>Alumno</h5>
+                      <p>Accede a tus cursos y materiales</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="role-option" data-role="docente">
+                      <i class="fas fa-chalkboard-teacher"></i>
+                      <h5>Docente</h5>
+                      <p>Gestiona tus clases y estudiantes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" id="role" name="role" value="">
+            </div>
 
+            <button class="btn btn-sm" style="background-color: var(--color-principal); color: white;" type="submit">
+              Iniciar Sesión
+            </button>
+          </form>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <p class="small mb-0">¿No tienes cuenta? <a href="../pages/iniciosesion.html">Regístrate aquí</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal de confirmación de Login -->
+  <div class="modal fade" id="loginConfirmModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center p-5">
+          <div class="mb-4">
+            <i class="fas fa-check-circle" style="font-size: 5rem; color: #ec008c;"></i>
+          </div>
+          <h3 class="mb-3">¡Inicio de sesión exitoso!</h3>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Funcionalidad del formulario de login
+    document.querySelector('#loginModal form').addEventListener('submit', function (e) {
+      e.preventDefault(); // Evita el envío real
+
+      // Oculta el modal de login
+      const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+      loginModal.hide();
+
+      // Muestra el modal de confirmación
+      const confirmModal = new bootstrap.Modal(document.getElementById('loginConfirmModal'));
+      confirmModal.show();
+
+      // Opcional: Limpiar el formulario después de mostrar la confirmación
+      setTimeout(() => {
+        this.reset();
+      }, 3000);
+    });
+
+    // Funcionalidad para seleccionar rol (si no está ya implementada)
+    document.querySelectorAll('.role-option').forEach(option => {
+      option.addEventListener('click', function () {
+        // Remover selección previa
+        document.querySelectorAll('.role-option').forEach(opt => {
+          opt.classList.remove('selected');
+        });
+
+        // Marcar como seleccionado
+        this.classList.add('selected');
+        document.getElementById('role').value = this.dataset.role;
+
+        // Habilitar el botón de login
+        document.querySelector('#loginModal form button[type="submit"]').disabled = false;
+      });
+    });
+
+    // Funcionalidad del formulario de inscripción (existente)
+    document.getElementById('formInscripcion').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const modal = new bootstrap.Modal(document.getElementById('confirmacionModal'));
+      modal.show();
+      setTimeout(() => {
+        this.reset();
+      }, 3000);
+    });
+  </script>
 </body>
 
 </html>

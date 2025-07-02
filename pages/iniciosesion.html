@@ -5,6 +5,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta SEO -->
+    <meta name="description"
+        content="Inscribite en nuestras clases de Fitness Dance en Tinogasta. Elige turno, sede y comenzá a entrenar bailando.">
+    <meta name="keywords"
+        content="inscripción fitness, danza, entrenamiento, clases de baile, fitness dance, turnos, tinogasta">
+    <meta name="author" content="Camila Barrionuevo">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Inscripción | Fitness Dance Tinogasta">
+    <meta property="og:description"
+        content="Completá el formulario para sumarte a nuestras clases. Elegí tu sede y comenzá a moverte.">
+    <meta property="og:image" content="https://fitnessdance.netlify.app/img/logo.png">
+    <meta property="og:url" content="https://fitnessdance.netlify.app/pages/inscripcion.html">
+    <meta property="og:type" content="website">
+
     <title>Inicio de Sesión - Fitness Dance</title>
     <link rel="stylesheet" href="../style/css/style.css" />
     <!-- Bootstrap -->
@@ -22,7 +38,7 @@
                 <a class="navbar-brand logo-combined d-flex align-items-center text-white position-relative"
                     href="../index.html">
                     <img src="../img/logo.png" alt="Logo Fitness Dance" width="40" height="40"
-                        class="me-2 logo-combined-img" />
+                        class="me-2 logo-combined-img">
                     <h1 class="h5 mb-0 logo-combined-title">Fitness Dance</h1>
                     <span class="logo-combined-underline"></span>
                     <span class="logo-combined-gradient"></span>
@@ -50,11 +66,19 @@
                             <a class="nav-link text-white" href="../pages/inscripcion.html">Inscripción</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-white" href="../pages/galeria.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../pages/capacitaciones.html">Capacitaciones</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-white" href="../pages/contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-sm" style="background-color: var(--color-principal); color: white;"
-                                href="../pages/iniciosesion.html">Iniciar Sesión</a>
+                            <button class="btn btn-sm" style="background-color: var(--color-principal); color: white;"
+                                data-bs-toggle="modal" data-bs-target="#loginModal">
+                                Iniciar Sesión
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -63,30 +87,79 @@
     </header>
 
 
-    <main class="contenido">
-        <h1>Iniciar Sesión</h1>
-        <form class="formulario" action="#" method="post">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required />
+    <!-- Formulario de Registro -->
+    <section class="formulario-interes">
+        <div class="container">
+            <h1 class="section-title">Registro de Usuario</h1>
+            <div class="form-container">
+                <form id="registroForm" class="formulario" action="#" method="post">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
 
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required />
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-            <div class="tipo-usuario">
-                <p>Ingresar como:</p>
-                <label class="boton-radio">
-                    <input type="radio" name="tipo" value="alumno" required />
-                    Alumno
-                </label>
-                <label class="boton-radio">
-                    <input type="radio" name="tipo" value="docente" />
-                    Docente
-                </label>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="Ej: 3837488054"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" id="contrasena" name="contrasena" minlength="8" required>
+                        <small class="form-text">Mínimo 8 caracteres</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmar_contrasena">Confirmar Contraseña</label>
+                        <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required>
+                    </div>
+
+                    <div class="form-group tipo-usuario">
+                        <label>Registrarse como:</label>
+                        <div class="radio-group">
+                            <label class="boton-radio">
+                                <input type="radio" name="tipo" value="alumno" required>
+                                <span>Alumno</span>
+                            </label>
+                            <label class="boton-radio">
+                                <input type="radio" name="tipo" value="docente">
+                                <span>Docente</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="terminos" required>
+                        <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Registrarse</button>
+                </form>
             </div>
+        </div>
+    </section>
 
-            <button type="submit" class="boton">Entrar</button>
-        </form>
-    </main>
+    <!-- Modal de Registro Exitoso -->
+    <div class="modal fade" id="registroExitosoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-5">
+                    <div class="mb-4">
+                        <i class="fas fa-check-circle" style="font-size: 5rem; color: #ec008c;"></i>
+                    </div>
+                    <h3 class="mb-3">¡Registro exitoso!</h3>
+                    <p class="mb-4">Tu cuenta ha sido creada correctamente. Ahora puedes iniciar sesión.</p>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-contenido">
@@ -127,6 +200,182 @@
             </div>
         </div>
     </footer>
+    </script>
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/543837488054" target="_blank" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Modal de Registro Exitoso -->
+    <div class="modal fade" id="registroExitosoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-5">
+                    <div class="mb-4">
+                        <i class="fas fa-check-circle" style="font-size: 5rem; color: #ec008c;"></i>
+                    </div>
+                    <h3 class="mb-3">¡Registro exitoso!</h3>
+                    <p class="mb-4">Tu cuenta ha sido creada correctamente. Ahora puedes iniciar sesión.</p>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Funcionalidad del formulario de registro
+        document.getElementById('registroForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Evita el envío real del formulario
+
+            // Validación de contraseñas coincidentes
+            const contrasena = document.getElementById('contrasena').value;
+            const confirmarContrasena = document.getElementById('confirmar_contrasena').value;
+
+            if (contrasena !== confirmarContrasena) {
+                alert('Las contraseñas no coinciden');
+                return;
+            }
+
+            // Validación de términos y condiciones
+            if (!document.getElementById('terminos').checked) {
+                alert('Debes aceptar los términos y condiciones');
+                return;
+            }
+
+            // Mostrar modal de confirmación
+            const registroModal = new bootstrap.Modal(document.getElementById('registroExitosoModal'));
+            registroModal.show();
+
+            // Opcional: Limpiar el formulario después de 3 segundos
+            setTimeout(() => {
+                this.reset();
+            }, 3000);
+        });
+
+        // Funcionalidad del modal de login (si es necesario)
+        document.querySelector('#loginModal form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Tu lógica existente para el login...
+        });
+    </script>
+    <!-- Modal de Inicio de Sesión -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="formulario" action="#" method="post">
+                        <div class="mb-3">
+                            <label for="modalEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="modalEmail" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="modalPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="modalPassword" name="contrasena" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-medium">Selecciona tu rol</label>
+                            <div class="role-selector">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="role-option" data-role="alumno">
+                                            <i class="fas fa-user-graduate"></i>
+                                            <h5>Alumno</h5>
+                                            <p>Accede a tus cursos y materiales</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="role-option" data-role="docente">
+                                            <i class="fas fa-chalkboard-teacher"></i>
+                                            <h5>Docente</h5>
+                                            <p>Gestiona tus clases y estudiantes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="role" name="role" value="">
+                        </div>
+
+                        <button class="btn btn-sm" style="background-color: var(--color-principal); color: white;"
+                            type="submit">
+                            Iniciar Sesión
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="small mb-0">¿No tienes cuenta? <a href="../pages/iniciosesion.html">Regístrate aquí</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de confirmación de Login -->
+    <div class="modal fade" id="loginConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-5">
+                    <div class="mb-4">
+                        <i class="fas fa-check-circle" style="font-size: 5rem; color: #ec008c;"></i>
+                    </div>
+                    <h3 class="mb-3">¡Inicio de sesión exitoso!</h3>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Funcionalidad del formulario de login
+        document.querySelector('#loginModal form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Evita el envío real
+
+            // Oculta el modal de login
+            const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+            loginModal.hide();
+
+            // Muestra el modal de confirmación
+            const confirmModal = new bootstrap.Modal(document.getElementById('loginConfirmModal'));
+            confirmModal.show();
+
+            // Opcional: Limpiar el formulario después de mostrar la confirmación
+            setTimeout(() => {
+                this.reset();
+            }, 3000);
+        });
+
+        // Funcionalidad para seleccionar rol (si no está ya implementada)
+        document.querySelectorAll('.role-option').forEach(option => {
+            option.addEventListener('click', function () {
+                // Remover selección previa
+                document.querySelectorAll('.role-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+
+                // Marcar como seleccionado
+                this.classList.add('selected');
+                document.getElementById('role').value = this.dataset.role;
+
+                // Habilitar el botón de login
+                document.querySelector('#loginModal form button[type="submit"]').disabled = false;
+            });
+        });
+
+        // Funcionalidad del formulario de inscripción (existente)
+        document.getElementById('formInscripcion').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const modal = new bootstrap.Modal(document.getElementById('confirmacionModal'));
+            modal.show();
+            setTimeout(() => {
+                this.reset();
+            }, 3000);
+        });
+    </script>
 </body>
 
 </html>

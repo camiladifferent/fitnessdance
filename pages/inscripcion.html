@@ -5,6 +5,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta SEO -->
+    <meta name="description"
+        content="Inscribite en nuestras clases de Fitness Dance en Tinogasta. Elige turno, sede y comenzá a entrenar bailando.">
+    <meta name="keywords"
+        content="inscripción fitness, danza, entrenamiento, clases de baile, fitness dance, turnos, tinogasta">
+    <meta name="author" content="Camila Barrionuevo">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Inscripción | Fitness Dance Tinogasta">
+    <meta property="og:description"
+        content="Completá el formulario para sumarte a nuestras clases. Elegí tu sede y comenzá a moverte.">
+    <meta property="og:image" content="https://fitnessdance.netlify.app/img/logo.png">
+    <meta property="og:url" content="https://fitnessdance.netlify.app/pages/inscripcion.html">
+    <meta property="og:type" content="website">
+
     <title>Inscripción - Fitness Dance</title>
     <link rel="stylesheet" href="../style/css/style.css" />
     <!-- Bootstrap -->
@@ -22,7 +38,7 @@
                 <a class="navbar-brand logo-combined d-flex align-items-center text-white position-relative"
                     href="../index.html">
                     <img src="../img/logo.png" alt="Logo Fitness Dance" width="40" height="40"
-                        class="me-2 logo-combined-img" />
+                        class="me-2 logo-combined-img">
                     <h1 class="h5 mb-0 logo-combined-title">Fitness Dance</h1>
                     <span class="logo-combined-underline"></span>
                     <span class="logo-combined-gradient"></span>
@@ -47,14 +63,22 @@
                             <a class="nav-link text-white" href="../pages/sobrenosotros.html">Sobre Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="../pages/inscripcion.html">Inscripción</a>
+                            <a class="nav-link text-white active" href="../pages/inscripcion.html">Inscripción</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../pages/galeria.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../pages/capacitaciones.html">Capacitaciones</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="../pages/contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-sm" style="background-color: var(--color-principal); color: white;"
-                                href="../pages/iniciosesion.html">Iniciar Sesión</a>
+                            <button class="btn btn-sm" style="background-color: var(--color-principal); color: white;"
+                                data-bs-toggle="modal" data-bs-target="#loginModal">
+                                Iniciar Sesión
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -73,28 +97,47 @@
     </div>
     <main class="contenido">
         <h1>Formulario de Inscripción</h1>
-        <form class="formulario" action="#" method="post">
-            <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" required />
+        <!-- Formulario de Inscripción -->
+        <section class="formulario-interes">
+            <div class="container">
+                <h2 class="section-title">Inscríbete a nuestras clases</h2>
+                <div class="form-container">
+                    <form id="formInscripcion" class="formulario" action="#" method="post">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
 
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required />
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
 
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="Ej: 3837488054" required />
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}"
+                                placeholder="Ej: 3837488054" required>
+                        </div>
 
-            <label for="clase">Clase a inscribirse:</label>
-            <select id="clase" name="clase" required>
-                <option value="">--Selecciona una opción--</option>
-                <option value="danza">Turno 17 horas | Studio Dance</option>
-                <option value="fitness">Turno 18:30 horas | Sagittarius</option>
-            </select>
+                        <div class="form-group">
+                            <label for="clase">Clase a inscribirse</label>
+                            <select id="clase" name="clase" required>
+                                <option value="">--Selecciona una opción--</option>
+                                <option value="danza">Turno 17 horas | Studio Dance</option>
+                                <option value="fitness">Turno 18:30 horas | Sagittarius</option>
+                            </select>
+                        </div>
 
-            <label for="comentarios">Comentarios adicionales:</label>
-            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+                        <div class="form-group">
+                            <label for="comentarios">Comentarios adicionales</label>
+                            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+                        </div>
 
-            <button type="submit" class="boton">Enviar Inscripción</button>
-        </form>
+                        <button type="submit" class="btn-enviar">Enviar Inscripción</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
         <!-- Sección de información adicional -->
         <section class="info-inscripcion">
@@ -219,6 +262,7 @@
             </div>
         </div>
     </footer>
+
     <script>
         // Funcionalidad del acordeón FAQ
         document.querySelectorAll('.acordeon-titulo').forEach(button => {
@@ -242,6 +286,159 @@
                     }
                 });
             });
+        });
+    </script>
+
+    <!-- Modal de confirmación de Solicitud - Versión actualizada -->
+    <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-5">
+                    <div class="mb-4">
+                        <i class="fas fa-check-circle" style="font-size: 5rem; color: #ec008c;"></i>
+                    </div>
+                    <h3 class="mb-3">¡Inscripción exitosa!</h3>
+                    <p class="mb-4">Hemos recibido tu solicitud y nos pondremos en contacto contigo a la brevedad.</p>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/543837488054" target="_blank" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <!-- Modal de Inicio de Sesión -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="formulario" action="#" method="post">
+                        <div class="mb-3">
+                            <label for="modalEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="modalEmail" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="modalPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="modalPassword" name="contrasena" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-medium">Selecciona tu rol</label>
+                            <div class="role-selector">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="role-option" data-role="alumno">
+                                            <i class="fas fa-user-graduate"></i>
+                                            <h5>Alumno</h5>
+                                            <p>Accede a tus cursos y materiales</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="role-option" data-role="docente">
+                                            <i class="fas fa-chalkboard-teacher"></i>
+                                            <h5>Docente</h5>
+                                            <p>Gestiona tus clases y estudiantes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="role" name="role" value="">
+                        </div>
+
+                        <button class="btn btn-sm" style="background-color: var(--color-principal); color: white;"
+                            type="submit">
+                            Iniciar Sesión
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="small mb-0">¿No tienes cuenta? <a href="../pages/iniciosesion.html">Regístrate aquí</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de confirmación de Login -->
+    <div class="modal fade" id="loginConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-5">
+                    <div class="mb-4">
+                        <i class="fas fa-check-circle" style="font-size: 5rem; color: #ec008c;"></i>
+                    </div>
+                    <h3 class="mb-3">¡Inicio de sesión exitoso!</h3>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Esperar a que el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function () {
+            // Funcionalidad para el formulario de inscripción
+            const formInscripcion = document.getElementById('formInscripcion');
+            if (formInscripcion) {
+                formInscripcion.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    showModalAndResetForm('confirmacionModal', this);
+                });
+            }
+
+            // Funcionalidad del formulario de login
+            const loginForm = document.querySelector('#loginModal form');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Oculta el modal de login
+                    const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+                    if (loginModal) loginModal.hide();
+
+                    showModalAndResetForm('loginConfirmModal', this);
+                });
+
+                // Funcionalidad para seleccionar rol
+                document.querySelectorAll('.role-option').forEach(option => {
+                    option.addEventListener('click', function () {
+                        // Remover selección previa
+                        document.querySelectorAll('.role-option').forEach(opt => {
+                            opt.classList.remove('selected');
+                        });
+
+                        // Marcar como seleccionado
+                        this.classList.add('selected');
+                        document.getElementById('role').value = this.dataset.role;
+
+                        // Habilitar el botón de login
+                        const submitBtn = document.querySelector('#loginModal form button[type="submit"]');
+                        if (submitBtn) submitBtn.disabled = false;
+                    });
+                });
+            }
+
+            // Función reutilizable para mostrar modal y resetear formulario
+            function showModalAndResetForm(modalId, formElement) {
+                const modal = new bootstrap.Modal(document.getElementById(modalId));
+                if (modal) modal.show();
+
+                // Opcional: Limpiar el formulario después de 3 segundos
+                if (formElement) {
+                    setTimeout(() => {
+                        formElement.reset();
+                    }, 3000);
+                }
+            }
         });
     </script>
 </body>

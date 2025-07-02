@@ -22,8 +22,12 @@
 ## 📸 Capturas de Pantalla
 
 <div align="center">
-  <img src="screenshot/captura.png" width="45%" alt="Página principal">
-  <br>Vistas del sitio FitnessDance - Diseño responsivo
+  <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+    <img src="screenshot/pccaptura.jpg" width="30%" alt="Versión PC">
+    <img src="screenshot/tabletcaptura.jpg" width="30%" alt="Versión Tablet">
+    <img src="screenshot/celcaptura.jpg" width="30%" alt="Versión Mobile">
+  </div>
+  <br>Vistas del sitio FitnessDance - Diseño responsivo (PC, Tablet y Mobile)
 </div>
 
 

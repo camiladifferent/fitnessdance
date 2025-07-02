@@ -10,6 +10,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Meta SEO -->
+    <meta name="description"
+        content="Fitness Dance: entrenamiento divertido y efectivo combinando baile y fitness en Tinogasta.">
+    <meta name="keywords" content="fitness, baile, tinogasta, entrenamiento, aerodance, aerobox, salud, bienestar">
+    <meta name="author" content="Camila Barrionuevo">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (para compartir en redes) -->
+    <meta property="og:title" content="Fitness Dance - Transformá tu cuerpo bailando">
+    <meta property="og:description" content="Sumate a nuestras clases en Tinogasta y combiná diversión, salud y baile.">
+    <meta property="og:image" content="https://fitnessdance.netlify.app/img/logo.png">
+    <meta property="og:url" content="https://fitnessdance.netlify.app/index.html">
+    <meta property="og:type" content="website">
 </head>
 
 <body>
@@ -21,7 +35,7 @@
                 <a class="navbar-brand logo-combined d-flex align-items-center text-white position-relative"
                     href="index.html">
                     <img src="img/logo.png" alt="Logo Fitness Dance" width="40" height="40"
-                        class="me-2 logo-combined-img" />
+                        class="me-2 logo-combined-img" loading="lazy"/>
                     <h1 class="h5 mb-0 logo-combined-title">Fitness Dance</h1>
                     <span class="logo-combined-underline"></span>
                     <span class="logo-combined-gradient"></span>
@@ -38,7 +52,7 @@
                 <div class="collapse navbar-collapse" id="menuNav">
                     <ul class="navbar-nav ms-auto d-flex align-items-center gap-3">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="index.html">Inicio</a>
+                            <a class="nav-link text-white active" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="pages/beneficios.html">Beneficios</a>
@@ -50,11 +64,19 @@
                             <a class="nav-link text-white" href="pages/inscripcion.html">Inscripción</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-white" href="pages/galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="pages/capacitaciones.html">Capacitaciones</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-white" href="pages/contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-sm" style="background-color: var(--color-principal); color: white;"
-                                href="pages/iniciosesion.html">Iniciar Sesión</a>
+                            <button class="btn btn-sm" style="background-color: var(--color-principal); color: white;"
+                                data-bs-toggle="modal" data-bs-target="#loginModal">
+                                Iniciar Sesión
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -69,13 +91,13 @@
                 <!-- Imágenes del carrusel -->
                 <div class="carrusel-inner">
                     <div class="carrusel-item active">
-                        <img src="img/banner/banner1.jpg" alt="Clase de Fitness Dance">
+                        <img src="img/banner/banner1.jpg" alt="Clase de Fitness Dance" loading="lazy">
                     </div>
                     <div class="carrusel-item">
-                        <img src="img/banner/banner2.jpg" alt="Grupo bailando">
+                        <img src="img/banner/banner2.jpg" alt="Grupo bailando" loading="lazy">
                     </div>
                     <div class="carrusel-item">
-                        <img src="img/banner/banner3.jpg" alt="Entrenamiento en equipo">
+                        <img src="img/banner/banner3.jpg" alt="Entrenamiento en equipo" loading="lazy">
                     </div>
                 </div>
 
@@ -98,7 +120,7 @@
             <!-- Logo animado en el costado -->
             <div class="banner-logo-animado">
                 <div class="logo-container">
-                    <img src="img/logo.png" alt="Logo Fitness Dance" class="logo-spin">
+                    <img src="img/logo.png" alt="Logo Fitness Dance" class="logo-spin" loading="lazy">
                     <div class="logo-rays"></div>
                 </div>
                 <h2>Fitness Dance</h2>
@@ -118,30 +140,55 @@
         </section>
 
 
-        <!-- Video destacado de YouTube -->
+        <!-- Sección combinada: Video + Instagram -->
         <section class="texto-animado delay-2">
             <h2 class="text-center" style="margin-bottom: 20px;">Conocé nuestros horarios y lugar</h2>
-            <div class="video-container">
-                <iframe
-                    src="https://www.youtube.com/embed/ydO9SiB-e1E?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0"
-                    frameborder="0" allowfullscreen>
-                </iframe>
+
+            <div class="contenedor-multimedia"> <!-- Contenedor padre -->
+                <!-- Video -->
+                <div class="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/ydO9SiB-e1E?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0"
+                        frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- Instagram -->
+                <div class="instagram-container">
+                    <iframe src="https://www.instagram.com/fitnessdancetinogasta/embed" frameborder="0" scrolling="no"
+                        allowtransparency="true"
+                        style="width:100%; height:100%; border:none; overflow:hidden;"></iframe>
+                </div>
             </div>
         </section>
+    </main>
+    <div class="banner-container">
+        <!-- Elementos decorativos -->
+        <div class="banner-circle circle-1"></div>
+        <div class="banner-circle circle-2"></div>
+        <div class="banner-circle circle-3"></div>
+
+        <!-- Contenido principal -->
+        <div class="banner-content">
+            <h1 class="banner-title">Conoce de que trata Fitness Dance</h1>
+            <p class="banner-subtitle">Nuestras actividades y turnos </p>
+        </div>
+    </div>
+    <main class="contenido">
 
         <section class="resumen-actividades">
             <div class="actividad">
-                <img src="img/aeroboxstrong.png" alt="Aerobox Strong">
+                <img src="img/aeroboxstrong.png" alt="Aerobox Strong" loading="lazy">
                 <h3>Aerobox Strong</h3>
                 <p>Combinación intensa de movimientos de boxeo con entrenamiento funcional.</p>
             </div>
             <div class="actividad">
-                <img src="img/aerodance.png" alt="Aerodance">
+                <img src="img/aerodance.png" alt="Aerodance" loading="lazy">
                 <h3>Aerodance</h3>
                 <p>Clases coreografiadas para quemar calorías y disfrutar bailando.</p>
             </div>
             <div class="actividad">
-                <img src="img/ejercicios.png" alt="Ejercicios de Fuerza">
+                <img src="img/ejercicios.png" alt="Ejercicios de Fuerza" loading="lazy">
                 <h3>Ejercicios de Fuerza</h3>
                 <p>Entrenamiento con peso corporal o cargas para tonificar todo el cuerpo.</p>
             </div>
@@ -149,16 +196,14 @@
 
         <section class="seccion-doble">
             <div class="bloque">
-                <img src="img/1.jpg" alt="Clase de Danza">
-                <h2>Turno 1</h2>
+                <h2 class="turno-titulo pulse">Turno 1</h2>
                 <p>Lunes, Miércoles y Viernes</p>
                 <p>17 hs | Studio Dance - Calle Rivadavia Esq. Buenos Aires</p>
                 <p>Prof. Camila Barrionuevo</p>
             </div>
 
             <div class="bloque">
-                <img src="img/2.jpg" alt="Clase de Fitness">
-                <h2>Turno</h2>
+                <h2 class="turno-titulo pulse">Turno 2</h2>
                 <p>Lunes, Miércoles y Viernes</p>
                 <p>18:30 hs | Sagittarius - Calle Eva Perón</p>
                 <p>Prof. Camila Barrionuevo</p>
@@ -185,30 +230,30 @@
             <div class="contenedor-galeria">
                 <!-- Fila 1 -->
                 <div class="miniatura" data-fullsize="img/galeria1.jpg">
-                    <img src="img/galeria1.jpg" alt="Imagen de galeria 1">
+                    <img src="img/galeria1.jpg" alt="Clase de Fitness Dance grupal al aire libre">
                 </div>
                 <div class="miniatura" data-fullsize="img/galeria2.jpg">
-                    <img src="img/galeria2.jpg" alt="Imagen de galeria 2">
+                    <img src="img/galeria2.jpg" alt="Clase de Fitness Dance grupal al aire libre">
                 </div>
                 <div class="miniatura" data-fullsize="img/galeria3.jpg">
-                    <img src="img/galeria3.jpg" alt="Imagen de galeria 3">
+                    <img src="img/galeria3.jpg" alt="Clase de Fitness Dance grupal al aire libre">
                 </div>
                 <div class="miniatura" data-fullsize="img/galeria4.jpg">
-                    <img src="img/galeria4.jpg" alt="Imagen de galeria 4">
+                    <img src="img/galeria4.jpg" alt="Clase de Fitness Dance grupal al aire libre">
                 </div>
 
                 <!-- Fila 2 -->
                 <div class="miniatura" data-fullsize="img/galeria5.jpg">
-                    <img src="img/galeria5.jpg" alt="Imagen de galeria 5">
+                    <img src="img/galeria5.jpg" alt="Clase de Fitness Dance grupal al aire libre">
                 </div>
                 <div class="miniatura" data-fullsize="img/galeria6.jpg">
-                    <img src="img/galeria6.jpg" alt="Imagen de galeria 6">
+                    <img src="img/galeria6.jpg" alt="Clase de Fitness Dance grupal al aire libre">
                 </div>
                 <div class="miniatura" data-fullsize="img/galeria7.jpg">
-                    <img src="img/galeria7.jpg" alt="Imagen de galeria 7">
+                    <img src="img/galeria7.jpg" alt="Clase de Fitness Dance grupal al aire libre">
                 </div>
                 <div class="miniatura" data-fullsize="img/galeria8.jpg">
-                    <img src="img/galeria8.jpg" alt="Imagen de galeria 8">
+                    <img src="img/galeria8.jpg" alt="Clase de Fitness Dance grupal al aire libre">
                 </div>
             </div>
 
@@ -222,14 +267,32 @@
                 </div>
             </div>
         </section>
-        </br>
-        <section class="acciones">
-            <div class="contenedor-botones">
-                <a href="pages/inscripcion.html" class="boton">Inscribirse</a>
-                <a href="pages/contacto.html" class="boton secundario">Contacto</a>
-            </div>
-        </section>
+    </main>
 
+    </br>
+    <div class="banner-container">
+        <!-- Elementos decorativos -->
+        <div class="banner-circle circle-1"></div>
+        <div class="banner-circle circle-2"></div>
+        <div class="banner-circle circle-3"></div>
+
+        <!-- Contenido principal actualizado -->
+        <div class="banner-content">
+            <h1 class="banner-title">Visita nuestra galería</h1>
+            <p class="banner-subtitle">Explora imágenes y videos de nuestras clases ¡Y disfruta de una sesión
+                gratuita!</p>
+            <a href="pages/galeria.html" class="banner-btn">¡Ver Galeria!</a>
+        </div>
+    </div>
+    </div>
+    <section class="acciones">
+        <div class="contenedor-botones">
+            <a href="pages/inscripcion.html" class="boton">Inscribirse</a>
+            <a href="pages/contacto.html" class="boton secundario">Contacto</a>
+        </div>
+    </section>
+
+    <main class="contenido">
         <section class="seccion-promociones">
             <h2>Promociones</h2>
             <div class="seccion-doble">
@@ -252,7 +315,7 @@
             <!-- Bloque 1: Logo y texto -->
             <div class="footer-bloque">
                 <div class="footer-logo">
-                    <img src="img/logo.png" alt="Logo" />
+                    <img src="img/logo.png" alt="Logo Fitness Dance" />
                     <span>Fitness Dance</span>
                 </div>
             </div>
@@ -432,6 +495,128 @@
                     }
                 }
             });
+        });
+    </script>
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/543837488054" target="_blank" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <!-- Modal de Inicio de Sesión -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="formulario" action="#" method="post">
+                        <div class="mb-3">
+                            <label for="modalEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="modalEmail" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="modalPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="modalPassword" name="contrasena" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-medium">Selecciona tu rol</label>
+                            <div class="role-selector">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="role-option" data-role="alumno">
+                                            <i class="fas fa-user-graduate"></i>
+                                            <h5>Alumno</h5>
+                                            <p>Accede a tus cursos y materiales</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="role-option" data-role="docente">
+                                            <i class="fas fa-chalkboard-teacher"></i>
+                                            <h5>Docente</h5>
+                                            <p>Gestiona tus clases y estudiantes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="role" name="role" value="">
+                        </div>
+
+                        <button class="btn btn-sm" style="background-color: var(--color-principal); color: white;"
+                            type="submit">
+                            Iniciar Sesión
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="small mb-0">¿No tienes cuenta? <a href="pages/iniciosesion.html">Regístrate aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de confirmación de Login -->
+    <div class="modal fade" id="loginConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-5">
+                    <div class="mb-4">
+                        <i class="fas fa-check-circle" style="font-size: 5rem; color: #ec008c;"></i>
+                    </div>
+                    <h3 class="mb-3">¡Inicio de sesión exitoso!</h3>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Funcionalidad del formulario de login
+        document.querySelector('#loginModal form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Evita el envío real
+
+            // Oculta el modal de login
+            const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+            loginModal.hide();
+
+            // Muestra el modal de confirmación
+            const confirmModal = new bootstrap.Modal(document.getElementById('loginConfirmModal'));
+            confirmModal.show();
+
+            // Opcional: Limpiar el formulario después de mostrar la confirmación
+            setTimeout(() => {
+                this.reset();
+            }, 3000);
+        });
+
+        // Funcionalidad para seleccionar rol (si no está ya implementada)
+        document.querySelectorAll('.role-option').forEach(option => {
+            option.addEventListener('click', function () {
+                // Remover selección previa
+                document.querySelectorAll('.role-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+
+                // Marcar como seleccionado
+                this.classList.add('selected');
+                document.getElementById('role').value = this.dataset.role;
+
+                // Habilitar el botón de login
+                document.querySelector('#loginModal form button[type="submit"]').disabled = false;
+            });
+        });
+
+        // Funcionalidad del formulario de inscripción (existente)
+        document.getElementById('formInscripcion').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const modal = new bootstrap.Modal(document.getElementById('confirmacionModal'));
+            modal.show();
+            setTimeout(() => {
+                this.reset();
+            }, 3000);
         });
     </script>
 </body>

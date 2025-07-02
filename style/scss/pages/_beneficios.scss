@@ -1,0 +1,226 @@
+.beneficios-superiores,
+.beneficios-inferiores {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.beneficio-card {
+  flex: 0 0 45%;
+  max-width: 500px;
+  background: white;
+  border: 2px solid var(--color-principal);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .beneficio-card {
+    flex: 0 0 100%;
+  }
+}
+
+/* Estilos adicionales para mejorar la armonía visual */
+.beneficio-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.beneficio-card img {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.beneficio-card:hover img {
+  transform: scale(1.05);
+}
+/* beneficios */
+.beneficio-card {
+  background: white;
+  border: 2px solid var(--color-principal);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Imágenes mejoradas pero manteniendo tu estilo */
+.beneficio-card img {
+  max-height: 180px;
+  width: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.beneficio-card:hover img {
+  transform: scale(1.05);
+}
+
+.testimonio-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-principal);
+}
+
+.testimonio-texto {
+  font-style: italic;
+  color: #555;
+  line-height: 1.5;
+  margin: 15px 0;
+}
+
+@media (max-width: 768px) {
+  .beneficios-superiores,
+  .beneficios-inferiores {
+    gap: 20px;
+  }
+
+  .beneficio-card {
+    padding: 20px;
+  }
+}
+
+/* === Sección Importancia del Ejercicio === */
+.importancia-ejercicio {
+  margin: 60px 0;
+  padding: 0 20px;
+}
+
+.contenedor-importancia {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.card-importancia {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-top: 4px solid var(--color-principal);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-importancia:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-importancia::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-principal), var(--color-secundario));
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.card-importancia:hover::before {
+  opacity: 0.03;
+}
+
+.icono-importancia {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-principal), var(--color-secundario));
+  color: white;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.card-importancia:hover .icono-importancia {
+  transform: rotate(15deg) scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-importancia h3 {
+  color: var(--color-secundario);
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.card-importancia p {
+  color: #555;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+.recomendacion-oms {
+  max-width: 800px;
+  margin: 10px auto 0;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-left: 5px solid var(--color-principal);
+}
+
+.oms-icono {
+  font-size: 2.5rem;
+  color: var(--color-principal);
+  flex-shrink: 0;
+}
+
+.recomendacion-oms p {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.recomendacion-oms strong {
+  color: var(--color-principal);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor-importancia {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card-importancia {
+    padding: 25px 20px;
+  }
+
+  .recomendacion-oms {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+}

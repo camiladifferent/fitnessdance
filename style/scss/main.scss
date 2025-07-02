@@ -1,0 +1,28 @@
+// === Base ===
+@use "base/variables";
+@use "base/general";
+@use "base/animaciones";
+
+// === Componentes ===
+@use "componentes/header";
+@use "componentes/footer";
+@use "componentes/galeria";
+@use "componentes/videoytexto";
+@use "componentes/cards";
+@use "componentes/banner";
+@use "componentes/logo";
+@use "componentes/carusel";
+@use "componentes/faq";
+@use "componentes/botones";
+@use "componentes/galeriagrande";
+@use "componentes/acciones";
+@use "componentes/whatsapp";
+@use "componentes/textoturno";
+@use "componentes/galeria-profesional";
+
+// === Páginas ===
+@use "pages/beneficios";
+@use "pages/contacto";
+@use "pages/inscripcion";
+@use "pages/capacitaciones";
+@use "pages/iniciodesesion";

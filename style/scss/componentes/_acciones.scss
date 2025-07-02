@@ -1,0 +1,40 @@
+/* Estilos para la sección de acciones */
+.acciones {
+  padding: 10px 0px;
+  text-align: center;
+  margin: 0px 0;
+  padding-bottom: 40px;
+}
+
+.contenedor-botones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.boton.secundario {
+  background-color: var(--color-secundario);
+  color: white;
+}
+
+.boton.secundario:hover {
+  background-color: #1a1d6b;
+}
+
+/* Responsive para móviles */
+@media (max-width: 480px) {
+  .contenedor-botones {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .boton,
+  .boton.secundario {
+    width: 100%;
+    max-width: 250px;
+  }
+}

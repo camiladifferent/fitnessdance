@@ -16,8 +16,13 @@
 @use "componentes/botones";
 @use "componentes/galeriagrande";
 @use "componentes/acciones";
+@use "componentes/whatsapp";
+@use "componentes/textoturno";
+@use "componentes/galeria-profesional";
 
 // === Páginas ===
 @use "pages/beneficios";
 @use "pages/contacto";
 @use "pages/inscripcion";
+@use "pages/capacitaciones";
+@use "pages/iniciodesesion";

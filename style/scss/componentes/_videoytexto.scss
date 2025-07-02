@@ -16,31 +16,7 @@
   margin: 20px 0;
 }
 
-.video-container {
-  position: relative;
-  width: 800px;
-  height: 500px;
-  margin: 40px auto;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-@media (max-width: 768px) {
-  .video-container {
-    width: 90%;
-    height: calc(90vw * 0.5625);
-  }
-}
 
 .texto-animado {
   opacity: 0;
@@ -65,4 +41,33 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+.contenedor-multimedia {
+    display: grid;
+    grid-template-columns: 1fr 1fr; // 2 columnas de igual tamaño
+    gap: 20px; // Espacio entre video e Instagram
+    width: 100%;
+    max-width: 1600px; // Ajusta según tu diseño
+    margin: 0 auto;
+    
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; // 1 columna en móviles
+    }
+}
+
+.video-container, 
+.instagram-container {
+    position: relative;
+    padding-bottom: 60%; // Relación de aspecto 16:9 (igual que YouTube)
+    height: 0;
+    overflow: hidden;
+    
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px; // Opcional: bordes redondeados
+    }
 }

@@ -1,0 +1,232 @@
+/* Estilos para el modal de login */
+#loginModal .modal-content {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#loginModal .modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+#loginModal .modal-title {
+    color: var(--color-principal);
+    font-weight: 600;
+}
+
+#loginModal .btn-close {
+    font-size: 0.8rem;
+}
+
+#loginModal .form-control {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#loginModal .form-control:focus {
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 0.25rem rgba(var(--color-principal-rgb), 0.1);
+}
+
+#loginModal .btn-primary {
+    background-color: var(--color-principal);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+#loginModal .btn-primary:hover {
+    background-color: var(--color-secundario);
+}
+
+#loginModal .modal-footer a {
+    color: var(--color-principal);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#loginModal .modal-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el formulario de registro */
+#registroForm small.form-text {
+    color: #6c757d;
+    font-size: 0.8rem;
+}
+
+#registroForm .form-check {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#registroForm .form-check-label {
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+/* Estilos para el modal de éxito */
+#registroExitosoModal .modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+#registroExitosoModal .btn-primary {
+    background-color: var(--color-principal);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+#registroExitosoModal .btn-primary:hover {
+    background-color: var(--color-secundario);
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.login-header {
+    background: linear-gradient(to right, #4776E6, #8E54E9);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.login-header h2 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.login-body {
+    padding: 30px;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 12px 15px;
+    border: 2px solid #e1e5ee;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    border-color: #4776E6;
+    box-shadow: 0 0 0 0.25rem rgba(71, 118, 230, 0.25);
+}
+
+.btn-login {
+    background: linear-gradient(to right, #4776E6, #8E54E9);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(71, 118, 230, 0.4);
+}
+
+.login-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.role-selector {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.role-option {
+    cursor: pointer;
+    border: 2px solid #e1e5ee;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.role-option:hover,
+.role-option.active {
+    border-color: #4776E6;
+    background-color: rgba(71, 118, 230, 0.1);
+}
+
+.role-option i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #4776E6;
+}
+
+.welcome-modal .modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+}
+
+.welcome-modal .modal-header {
+    background: linear-gradient(to right, #4776E6, #8E54E9);
+    color: white;
+    border-bottom: none;
+}
+
+.welcome-modal .modal-body {
+    padding: 30px;
+    text-align: center;
+}
+
+.welcome-modal .modal-footer {
+    border-top: none;
+    justify-content: center;
+}
+
+.welcome-icon {
+    font-size: 5rem;
+    color: #4776E6;
+    margin-bottom: 20px;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+.countdown {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4776E6;
+    margin-top: 15px;
+}

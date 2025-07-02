@@ -21,8 +21,8 @@ body {
 }
 
 main.contenido {
-  padding: 40px 20px;
-  max-width: 1200px;
+  padding: 20px 20px;
+  max-width: 1800px;
   margin: auto;
 }
 
@@ -455,7 +455,7 @@ footer .boton {
 
 /* === Nueva Galería=== */
 .galeria {
-  padding: 40px 20px;
+  padding: 20px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -626,31 +626,6 @@ footer .boton {
   margin: 20px 0;
 }
 
-.video-container {
-  position: relative;
-  width: 800px;
-  height: 500px;
-  margin: 40px auto;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-@media (max-width: 768px) {
-  .video-container {
-    width: 90%;
-    height: 50.625vw;
-  }
-}
 .texto-animado {
   opacity: 0;
   transform: translateY(30px);
@@ -675,6 +650,37 @@ footer .boton {
     transform: translateY(0);
   }
 }
+.contenedor-multimedia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .contenedor-multimedia {
+    grid-template-columns: 1fr;
+  }
+}
+
+.video-container,
+.instagram-container {
+  position: relative;
+  padding-bottom: 60%;
+  height: 0;
+  overflow: hidden;
+}
+.video-container iframe,
+.instagram-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
 /* Efecto especial para las cards */
 .actividad-especial {
   position: relative;
@@ -1253,6 +1259,139 @@ footer .boton {
     max-width: 250px;
   }
 }
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+.whatsapp-float > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-principal);
+  text-decoration: none !important;
+  /* Color oficial de WhatsApp */
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.whatsapp-float > a:hover {
+  background-color: var(--color-secundario);
+  /* Color hover */
+  transform: scale(1.1);
+}
+.whatsapp-float > a i {
+  font-size: 30px;
+}
+
+/* Efecto de pulso suave */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Efecto de color degradado */
+.turno-titulo {
+  background: linear-gradient(45deg, #ec008c, #2e3192, #00b4ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+/* Estilo para los títulos de actividad */
+.actividad-titulo {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  color: #555;
+  border-bottom: 2px solid #ec008c;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* Efecto hover adicional */
+.bloque:hover .turno-titulo {
+  transform: translateY(-3px);
+  transition: transform 0.3s ease;
+}
+
+/* Estilos para la galería de videos */
+.video-highlights {
+  margin-top: 2rem;
+}
+
+.video-featured {
+  background: var(--color-secundario);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-info {
+  background: white;
+}
+
+.video-title {
+  font-size: 1.1rem;
+  color: var(--color-principal);
+  margin-bottom: 0.5rem;
+}
+
+.video-meta {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.video-description {
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.video-level {
+  font-size: 0.75rem;
+  padding: 0.25em 0.5em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .video-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .video-meta span {
+    margin-bottom: 0.3rem;
+  }
+}
 .beneficios-superiores,
 .beneficios-inferiores {
   display: flex;
@@ -1432,7 +1571,7 @@ footer .boton {
 
 .recomendacion-oms {
   max-width: 800px;
-  margin: 50px auto 0;
+  margin: 10px auto 0;
   padding: 25px;
   background: white;
   border-radius: 12px;
@@ -1724,6 +1863,498 @@ footer .boton {
   .card-info {
     padding: 25px;
   }
+}
+.banner-capacitaciones {
+  position: relative;
+  height: 300px;
+  background: url("../img/capacitaciones/banner-capacitaciones.jpg") no-repeat center center;
+  background-size: cover;
+  color: white;
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+.banner-capacitaciones .banner-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 1rem;
+}
+.banner-capacitaciones .banner-content .banner-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.banner-capacitaciones .banner-content .banner-subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.banner-capacitaciones .banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, rgba(236, 0, 140, 0.7) 0%, rgba(46, 49, 146, 0.7) 100%);
+  opacity: 0.9;
+}
+
+.intro-capacitaciones {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+.intro-capacitaciones h2 {
+  color: #2e3192;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+.intro-capacitaciones h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #ec008c;
+}
+.intro-capacitaciones p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.testimonios-capacitaciones {
+  padding: 3rem 0;
+  background: linear-gradient(rgba(46, 49, 146, 0.9), rgba(46, 49, 146, 0.9));
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+.testimonios-capacitaciones .section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.testimonios-capacitaciones .section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #ec008c;
+}
+.testimonios-capacitaciones .testimonios-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.testimonios-capacitaciones .testimonio-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+.testimonios-capacitaciones .testimonio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.testimonios-capacitaciones .testimonio-card .testimonio-texto {
+  font-style: italic;
+  margin-bottom: 1rem;
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+.testimonios-capacitaciones .testimonio-card .testimonio-texto::before, .testimonios-capacitaciones .testimonio-card .testimonio-texto::after {
+  content: '"';
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  position: absolute;
+}
+.testimonios-capacitaciones .testimonio-card .testimonio-texto::before {
+  top: -15px;
+  left: -10px;
+}
+.testimonios-capacitaciones .testimonio-card .testimonio-texto::after {
+  bottom: -25px;
+  right: -10px;
+}
+.testimonios-capacitaciones .testimonio-card .testimonio-autor {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.testimonios-capacitaciones .testimonio-card .testimonio-autor .autor-foto {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+  border: 2px solid #ec008c;
+}
+.testimonios-capacitaciones .testimonio-card .testimonio-autor .autor-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.testimonios-capacitaciones .testimonio-card .testimonio-autor .autor-info h4 {
+  margin-bottom: 0.2rem;
+  color: #ec008c;
+}
+.testimonios-capacitaciones .testimonio-card .testimonio-autor .autor-info p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.formulario-interes {
+  padding: 3rem 0;
+  background-color: #f8f8f8;
+}
+.formulario-interes .section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2e3192;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.formulario-interes .section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #ec008c;
+}
+.formulario-interes .form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.formulario-interes .form-group {
+  margin-bottom: 1.5rem;
+}
+.formulario-interes .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #2e3192;
+}
+.formulario-interes .form-group input, .formulario-interes .form-group select, .formulario-interes .form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.formulario-interes .form-group input:focus, .formulario-interes .form-group select:focus, .formulario-interes .form-group textarea:focus {
+  border-color: #ec008c;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(236, 0, 140, 0.2);
+}
+.formulario-interes .form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.formulario-interes .btn-enviar {
+  background: #ec008c;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+.formulario-interes .btn-enviar:hover {
+  background: #ec008c, 10%;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .banner-capacitaciones {
+    height: 250px;
+  }
+  .banner-capacitaciones .banner-title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .banner-capacitaciones {
+    height: 200px;
+  }
+  .banner-capacitaciones .banner-title {
+    font-size: 2rem;
+  }
+  .banner-capacitaciones .banner-subtitle {
+    font-size: 1rem;
+  }
+  .programas-capacitacion .programas-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .banner-capacitaciones {
+    height: 180px;
+  }
+  .banner-capacitaciones .banner-title {
+    font-size: 1.8rem;
+  }
+  .formulario-interes .form-container {
+    padding: 1.5rem;
+  }
+}
+/* Estilos para el modal de login */
+#loginModal .modal-content {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#loginModal .modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+#loginModal .modal-title {
+  color: var(--color-principal);
+  font-weight: 600;
+}
+
+#loginModal .btn-close {
+  font-size: 0.8rem;
+}
+
+#loginModal .form-control {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+#loginModal .form-control:focus {
+  border-color: var(--color-principal);
+  box-shadow: 0 0 0 0.25rem rgba(var(--color-principal-rgb), 0.1);
+}
+
+#loginModal .btn-primary {
+  background-color: var(--color-principal);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+#loginModal .btn-primary:hover {
+  background-color: var(--color-secundario);
+}
+
+#loginModal .modal-footer a {
+  color: var(--color-principal);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#loginModal .modal-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para el formulario de registro */
+#registroForm small.form-text {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+#registroForm .form-check {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#registroForm .form-check-label {
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+/* Estilos para el modal de éxito */
+#registroExitosoModal .modal-content {
+  border-radius: 15px;
+  border: none;
+}
+
+#registroExitosoModal .btn-primary {
+  background-color: var(--color-principal);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+#registroExitosoModal .btn-primary:hover {
+  background-color: var(--color-secundario);
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.login-header {
+  background: linear-gradient(to right, #4776E6, #8E54E9);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.login-header h2 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.login-body {
+  padding: 30px;
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 12px 15px;
+  border: 2px solid #e1e5ee;
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  border-color: #4776E6;
+  box-shadow: 0 0 0 0.25rem rgba(71, 118, 230, 0.25);
+}
+
+.btn-login {
+  background: linear-gradient(to right, #4776E6, #8E54E9);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(71, 118, 230, 0.4);
+}
+
+.login-footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.role-selector {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.role-option {
+  cursor: pointer;
+  border: 2px solid #e1e5ee;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.role-option:hover,
+.role-option.active {
+  border-color: #4776E6;
+  background-color: rgba(71, 118, 230, 0.1);
+}
+
+.role-option i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #4776E6;
+}
+
+.welcome-modal .modal-content {
+  border-radius: 15px;
+  overflow: hidden;
+  border: none;
+}
+
+.welcome-modal .modal-header {
+  background: linear-gradient(to right, #4776E6, #8E54E9);
+  color: white;
+  border-bottom: none;
+}
+
+.welcome-modal .modal-body {
+  padding: 30px;
+  text-align: center;
+}
+
+.welcome-modal .modal-footer {
+  border-top: none;
+  justify-content: center;
+}
+
+.welcome-icon {
+  font-size: 5rem;
+  color: #4776E6;
+  margin-bottom: 20px;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+.countdown {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4776E6;
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

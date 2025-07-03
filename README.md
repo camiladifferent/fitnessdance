@@ -22,10 +22,16 @@
 ## 📸 Capturas de Pantalla
 
 <div align="center">
-  <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-    <img src="screenshot/pccaptura.jpg" width="30%" alt="Versión PC">
-    <img src="screenshot/tabletcaptura.jpg" width="30%" alt="Versión Tablet">
-    <img src="screenshot/celcaptura.jpg" width="30%" alt="Versión Mobile">
+  <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; align-items: flex-start;">
+    <div style="width: 30%; min-width: 250px;">
+      <img src="screenshot/pccaptura.jpg" style="width: 100%; height: auto; object-fit: contain;" alt="Versión PC">
+    </div>
+    <div style="width: 30%; min-width: 250px;">
+      <img src="screenshot/tabletcaptura.jpg" style="width: 100%; height: auto; object-fit: contain;" alt="Versión Tablet">
+    </div>
+    <div style="width: 30%; min-width: 250px;">
+      <img src="screenshot/celcaptura.jpg" style="width: 100%; height: auto; object-fit: contain;" alt="Versión Mobile">
+    </div>
   </div>
   <br>Vistas del sitio FitnessDance - Diseño responsivo (PC, Tablet y Mobile)
 </div>

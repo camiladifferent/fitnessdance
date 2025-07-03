@@ -23,15 +23,9 @@
 
 <div align="center">
   <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; align-items: flex-start;">
-    <div style="width: 30%; min-width: 250px;">
-      <img src="screenshot/pccaptura.jpg" style="width: 100%; height: auto; object-fit: contain;" alt="Versión PC">
-    </div>
-    <div style="width: 30%; min-width: 250px;">
-      <img src="screenshot/tabletcaptura.jpg" style="width: 100%; height: auto; object-fit: contain;" alt="Versión Tablet">
-    </div>
-    <div style="width: 30%; min-width: 250px;">
-      <img src="screenshot/celcaptura.jpg" style="width: 100%; height: auto; object-fit: contain;" alt="Versión Mobile">
-    </div>
+    <img src="screenshot/pccaptura.jpg" style="height: 300px; width: auto; object-fit: contain;" alt="Versión PC">
+    <img src="screenshot/tabletcaptura.jpg" style="height: 300px; width: auto; object-fit: contain;" alt="Versión Tablet">
+    <img src="screenshot/celcaptura.jpg" style="height: 300px; width: auto; object-fit: contain;" alt="Versión Mobile">
   </div>
   <br>Vistas del sitio FitnessDance - Diseño responsivo (PC, Tablet y Mobile)
 </div>
